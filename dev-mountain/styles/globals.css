@@ -24,7 +24,8 @@ a {
   font-weight: bold;
 }
 
-a.active {
+a.active,
+a:hover {
   color: #146695;
   font-weight: bold;
 }
