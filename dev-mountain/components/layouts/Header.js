@@ -24,7 +24,7 @@ function Header() {
       shadow-lg
       navbar navbar-expand-lg navbar-light"
     >
-      <div class="container-fluid w-full flex flex-wrap items-center justify-between px-64">
+      <div class="container-fluid w-full flex flex-wrap items-center lg:justify-between md:justify-center sm:justify-center lg:px-64 md:px-30 sm:px-20">
         <div className="flex items-center">
           <img className="max-w-full h-auto mr-4" src={devMoutainLogo} />
           <div className="w-px h-9 border-2 border-solid border-gray-300 mr-4"></div>
@@ -82,10 +82,10 @@ function Header() {
           </div>
         </div>
 
-        <div class="input-group relative flex items-center rounded">
+        <div class="input-group relative flex items-center">
           <input
             type="search"
-            class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-full transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
             placeholder="Search"
             aria-label="Search"
             aria-describedby="button-addon2"
