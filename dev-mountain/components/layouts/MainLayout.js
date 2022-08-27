@@ -8,7 +8,8 @@ function MainLayout({ children }) {
   return (
     <div className={styles.container}>
       <Header />
-      <main className={styles.main}>{children}</main>
+      {/* <main className={styles.main}>{children}</main> */}
+      <main className="container mx-auto min-h-screen">{children}</main>
       <Footer />
     </div>
   );
