@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import MainLayout from "../components/layouts/MainLayout";
 import EventCard from "../components/EventCard";
 import ArticleCard from "../components/ArticleCard";
+import VideoCard from "../components/VideoCard";
 
 const demoEventImg = "/images/demo-event-img.png";
 const demoArticleImg = "/images/demo-article-img.png";
@@ -103,7 +104,6 @@ export const getServerSideProps = async (context) => {
       description:
         "AI ตัวย่อที่ฟังดูยาก แต่วันนี้จะถูกปรับมาอธิบายให้ฟังง่าย โดย คุณพงศ์ ไชยพงศ์ ลาภเลี้ยงตระกูล CEO จาก 3DS Interactive ที่ไม่ใช่แค่เข้าใจง่ายเท่านั้น แต่ยังพูดถึงความสำคัญของ AI ที่จะมีผลต่อการสร้างแบรนด์และการขยายฐานลูกค้า สิ่งเหล่านี้ AI สามารถทำได้อย่างไร ติดตามได้ใน session นี้เท่านั้น",
       duration: "6 days ago",
-      tags: ["Digital Marketing"],
       img: demoVideoImg,
     },
     {
@@ -112,14 +112,14 @@ export const getServerSideProps = async (context) => {
       description:
         "AI ตัวย่อที่ฟังดูยาก แต่วันนี้จะถูกปรับมาอธิบายให้ฟังง่าย โดย คุณพงศ์ ไชยพงศ์ ลาภเลี้ยงตระกูล CEO จาก 3DS Interactive ที่ไม่ใช่แค่เข้าใจง่ายเท่านั้น แต่ยังพูดถึงความสำคัญของ AI ที่จะมีผลต่อการสร้างแบรนด์และการขยายฐานลูกค้า สิ่งเหล่านี้ AI สามารถทำได้อย่างไร ติดตามได้ใน session นี้เท่านั้น",
       duration: "4 weeks ago",
-      tags: ["Business"],
       img: demoVideoImg,
     },
     {
       id: 3,
       name: "Stock Photo Trends for Buyers and Contributors",
+      description:
+        "AI ตัวย่อที่ฟังดูยาก แต่วันนี้จะถูกปรับมาอธิบายให้ฟังง่าย โดย คุณพงศ์ ไชยพงศ์ ลาภเลี้ยงตระกูล CEO จาก 3DS Interactive ที่ไม่ใช่แค่เข้าใจง่ายเท่านั้น แต่ยังพูดถึงความสำคัญของ AI ที่จะมีผลต่อการสร้างแบรนด์และการขยายฐานลูกค้า สิ่งเหล่านี้ AI สามารถทำได้อย่างไร ติดตามได้ใน session นี้เท่านั้น",
       duration: "2 months ago",
-      tags: ["Living"],
       img: demoVideoImg,
     },
     {
@@ -128,7 +128,6 @@ export const getServerSideProps = async (context) => {
       description:
         "AI ตัวย่อที่ฟังดูยาก แต่วันนี้จะถูกปรับมาอธิบายให้ฟังง่าย โดย คุณพงศ์ ไชยพงศ์ ลาภเลี้ยงตระกูล CEO จาก 3DS Interactive ที่ไม่ใช่แค่เข้าใจง่ายเท่านั้น แต่ยังพูดถึงความสำคัญของ AI ที่จะมีผลต่อการสร้างแบรนด์และการขยายฐานลูกค้า สิ่งเหล่านี้ AI สามารถทำได้อย่างไร ติดตามได้ใน session นี้เท่านั้น",
       duration: "2 months ago",
-      tags: ["Digital Marketing", "Technology"],
       img: demoVideoImg,
     },
     {
@@ -137,7 +136,6 @@ export const getServerSideProps = async (context) => {
       description:
         "AI ตัวย่อที่ฟังดูยาก แต่วันนี้จะถูกปรับมาอธิบายให้ฟังง่าย โดย คุณพงศ์ ไชยพงศ์ ลาภเลี้ยงตระกูล CEO จาก 3DS Interactive ที่ไม่ใช่แค่เข้าใจง่ายเท่านั้น แต่ยังพูดถึงความสำคัญของ AI ที่จะมีผลต่อการสร้างแบรนด์และการขยายฐานลูกค้า สิ่งเหล่านี้ AI สามารถทำได้อย่างไร ติดตามได้ใน session นี้เท่านั้น",
       duration: "2 months ago",
-      tags: ["Digital Marketing", "Technology"],
       img: demoVideoImg,
     },
   ];
@@ -160,10 +158,34 @@ export default function Home({ events, articles, videos }) {
           <EventCard key={v.id} event={v} />
         ))}
       </div>
-      <div class="grid grid-cols-4 grid-rows-3 gap-4">
+      <div class="grid grid-cols-4 grid-rows- gap-4">
         {articles.map((v) => (
           <ArticleCard key={v.id} article={v} />
         ))}
+      </div>
+      <div className="video-container flex items-stretch">
+        <div class="flex-1 flex justify-center">
+          <div class="rounded-lg shadow-lg bg-white max-w-xl h-3">
+            <img class="rounded-t-lg min-w-full" src={videos[0].img} alt="" />
+            <div class="p-6">
+              <h5 class="text-gray-900 text-xl font-medium mb-6">
+                {videos[0].name}
+              </h5>
+              <div>
+                <div className="truncate mb-2">{videos[0].description}</div>
+                <div>{videos[0].duration}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex-1 flex flex-col gap-4 overflow-y-auto scrollbar">
+          {videos
+            .filter((v) => v.id !== 1)
+            .map((v, i) => (
+              <VideoCard key={v.id} video={v} />
+            ))}
+        </div>
       </div>
     </MainLayout>
   );

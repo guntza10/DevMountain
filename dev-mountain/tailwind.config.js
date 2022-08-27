@@ -8,13 +8,13 @@ module.exports = {
   ],
   theme: {
     colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      primary: '#ffffff',
-      secondary: '#146695',
+      transparent: "transparent",
+      current: "currentColor",
+      primary: "#ffffff",
+      secondary: "#146695",
       grey: "#D1D1D1",
       black: "#000000",
-      sky: "#AFC3CB"
+      sky: "#AFC3CB",
     },
     extend: {},
   },
