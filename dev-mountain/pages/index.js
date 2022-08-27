@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import MainLayout from "../components/layouts/MainLayout";
 import EventCard from "../components/EventCard";
+import ArticleCard from "../components/ArticleCard";
 
 const demoEventImg = "/images/demo-event-img.png";
 const demoArticleImg = "/images/demo-article-img.png";
@@ -157,6 +158,11 @@ export default function Home({ events, articles, videos }) {
       <div className="flex items-stretch justify-center gap-5">
         {events.map((v) => (
           <EventCard key={v.id} event={v} />
+        ))}
+      </div>
+      <div class="grid grid-cols-4 grid-rows-3 gap-4">
+        {articles.map((v) => (
+          <ArticleCard key={v.id} article={v} />
         ))}
       </div>
     </MainLayout>
