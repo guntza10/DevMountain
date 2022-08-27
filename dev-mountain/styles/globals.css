@@ -19,18 +19,18 @@ a {
   box-sizing: border-box;
 }
 
-a {
-  color: #000000;
+.link-menu {
+  @apply text-black;
   font-weight: bold;
 }
 
-a.active,
-a:hover {
-  color: #146695;
-  font-weight: bold;
+.link-menu.active,
+.link-menu:hover {
+  @apply text-secondary;
+  @apply font-bold;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -38,4 +38,4 @@ a:hover {
     color: white;
     background: black;
   }
-}
+} */
