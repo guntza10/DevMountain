@@ -171,15 +171,23 @@ export default function Home({ events, articles, videos }) {
         </div>
       </div>
 
-      <div className="container mx-auto px-28">
-        <div className="text-4xl text-secondary font-bold mb-4">Event</div>
+      <div className="container mx-auto px-28 ">
+        <div className="flex items-center justify-between mb-4">
+          <div className="text-4xl text-secondary font-bold ">Event</div>
+          <div className="text-xl text-secondary">see all</div>
+        </div>
+
         <div className="flex items-stretch justify-between mb-64">
           {events.map((v) => (
             <EventCard key={v.id} event={v} />
           ))}
         </div>
 
-        <div className="text-4xl text-secondary font-bold mb-4">Article</div>
+        <div className="flex items-center justify-between mb-4">
+          <div className="text-4xl text-secondary font-bold ">Article</div>
+          <div className="text-xl text-secondary">see all</div>
+        </div>
+
         <div class="grid grid-cols-4 grid-rows- gap-4 mb-64">
           {articles.map((v) => (
             <ArticleCard key={v.id} article={v} />
