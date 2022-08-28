@@ -171,7 +171,7 @@ export default function Home({ events, articles, videos }) {
         </div>
       </div>
 
-      <div className="container mx-auto px-28 ">
+      <div className="container mx-auto px-28">
         <div className="flex items-center justify-between mb-4">
           <div className="text-4xl text-secondary font-bold ">Event</div>
           <div className="text-xl text-secondary">see all</div>

@@ -74,6 +74,19 @@ a {
   /* background-attachment: fixed; */
 }
 
+.bg-event-banner {
+  position: relative;
+  background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0) 20%,
+      rgba(255, 255, 255, 1)
+    ),
+    url("/images/demo-event-banner.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .bg-footer {
   height: 600px;
   position: relative;
