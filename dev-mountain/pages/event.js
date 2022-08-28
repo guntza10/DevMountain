@@ -90,7 +90,7 @@ export default function Event({ events, allEvents }) {
   return (
     <MainLayout>
       <div className="bg-event-banner mb-20">
-        <div className="carousel-home flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center">
           <div className="text-6xl font-bold">Event</div>
         </div>
       </div>

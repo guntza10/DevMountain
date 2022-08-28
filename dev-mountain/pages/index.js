@@ -155,7 +155,7 @@ export default function Home({ events, articles, videos }) {
   return (
     <MainLayout>
       <div className="bg-carousel mb-20">
-        <div className="carousel-home flex flex-col justify-center">
+        <div className="flex flex-col justify-center">
           <div className="container mx-auto px-28 text-4xl font-bold mb-10">
             Lorem ipsum dolor sit amet, consetetur
           </div>

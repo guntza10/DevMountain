@@ -56,11 +56,8 @@ a {
   height: 600px;
 }
 
-.carousel-home {
-  min-height: 650px;
-}
-
 .bg-carousel {
+  padding: 150px;
   position: relative;
   background: linear-gradient(
       to left,
@@ -75,13 +72,9 @@ a {
 }
 
 .bg-event-banner {
+  padding: 200px;
   position: relative;
-  background: linear-gradient(
-      to left,
-      rgba(255, 255, 255, 0) 20%,
-      rgba(255, 255, 255, 1)
-    ),
-    url("/images/demo-event-banner.png");
+  background: url("/images/demo-event-banner.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
