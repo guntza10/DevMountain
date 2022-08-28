@@ -72,6 +72,14 @@ a {
   /* background-attachment: fixed; */
 }
 
+.collapse-bg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 8vw;
+  /* set height to pixels if you want angle to change with screen width */
+}
+
 .bg-event-banner {
   padding: 200px;
   position: relative;
