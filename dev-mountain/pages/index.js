@@ -7,6 +7,7 @@ import VideoCard from "../components/VideoCard";
 const demoEventImg = "/images/demo-event-img.png";
 const demoArticleImg = "/images/demo-article-img.png";
 const demoVideoImg = "/images/demo-video-img.png";
+const demoCarouselImg = "/images/demo-carousel.png";
 
 export const getServerSideProps = async (context) => {
   const events = [
@@ -153,19 +154,41 @@ export default function Home({ events, articles, videos }) {
   }, [events, articles, videos]);
   return (
     <MainLayout>
-      <div className="flex items-stretch justify-center gap-5">
-        {events.map((v) => (
-          <EventCard key={v.id} event={v} />
-        ))}
+      <div className="bg-carousel mb-20">
+        <div className="carousel-home flex flex-col justify-center">
+          <div className="container mx-auto px-28 text-4xl font-bold mb-10">
+            Lorem ipsum dolor sit amet, consetetur
+          </div>
+          <div className="container mx-auto px-28 text-lg mb-10">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod
+          </div>
+          <div className="container mx-auto px-28 text-lg">
+            <button className="rounded-full text-primary font-bold bg-secondary w-56 p-3">
+              Go Event
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="grid grid-cols-4 grid-rows- gap-4">
-        {articles.map((v) => (
-          <ArticleCard key={v.id} article={v} />
-        ))}
-      </div>
-      <div className="video-container flex items-stretch">
-        <div class="flex-1 flex justify-center">
-          <div class="rounded-lg shadow-lg bg-white max-w-xl h-3">
+
+      <div className="container mx-auto px-28">
+        <div className="text-4xl text-secondary font-bold mb-4">Event</div>
+        <div className="flex items-stretch justify-between mb-64">
+          {events.map((v) => (
+            <EventCard key={v.id} event={v} />
+          ))}
+        </div>
+
+        <div className="text-4xl text-secondary font-bold mb-4">Article</div>
+        <div class="grid grid-cols-4 grid-rows- gap-4 mb-64">
+          {articles.map((v) => (
+            <ArticleCard key={v.id} article={v} />
+          ))}
+        </div>
+
+        <div className="text-4xl text-secondary font-bold mb-4">Video</div>
+        <div className="video-container flex justify-between mb-48">
+          <div class="rounded-lg shadow-lg bg-white max-w-3xl">
             <img class="rounded-t-lg min-w-full" src={videos[0].img} alt="" />
             <div class="p-6">
               <h5 class="text-gray-900 text-xl font-medium mb-6">
@@ -177,14 +200,14 @@ export default function Home({ events, articles, videos }) {
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="flex-1 flex flex-col gap-4 overflow-y-auto scrollbar">
-          {videos
-            .filter((v) => v.id !== 1)
-            .map((v, i) => (
-              <VideoCard key={v.id} video={v} />
-            ))}
+          <div className="flex flex-col gap-4 overflow-y-auto scrollbar">
+            {videos
+              .filter((v) => v.id !== 1)
+              .map((v, i) => (
+                <VideoCard key={v.id} video={v} />
+              ))}
+          </div>
         </div>
       </div>
     </MainLayout>

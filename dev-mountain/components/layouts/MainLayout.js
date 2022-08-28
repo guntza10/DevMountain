@@ -8,7 +8,8 @@ function MainLayout({ children }) {
   return (
     <>
       <Header />
-      <main className="container mx-auto min-h-screen">{children}</main>
+      {/* <main className="container mx-auto min-h-screen">{children}</main> */}
+      <main className="w-full min-h-screen">{children}</main>
       <Footer />
     </>
   );

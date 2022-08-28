@@ -16,7 +16,11 @@ module.exports = {
       black: "#000000",
       sky: "#AFC3CB",
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "home-carousel": "url('/images/demo-carousel.png')",
+      },
+    },
   },
   plugins: [require("tw-elements/dist/plugin")],
 };
