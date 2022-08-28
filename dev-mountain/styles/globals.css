@@ -22,6 +22,7 @@ a {
 .link-menu {
   @apply text-black;
   @apply font-bold;
+  cursor: pointer;
 }
 
 .link-menu.active,
@@ -91,6 +92,7 @@ a {
 
 .banner {
   position: relative;
+  display: block;
   overflow: hidden;
   display: flex;
   flex-flow: column;
@@ -112,10 +114,33 @@ a {
 
 .rotated-banner {
   position: absolute;
-  display: block;
-  width: 100%;
+  width: 150%;
   min-height: 150%;
   background: #ffff;
-  transform: rotate(-7deg);
-  top: 76%;
+  transform: rotate(-6deg);
+  top: 69%;
+  left: -5%;
 }
+
+.menu {
+  list-style-type: none;
+}
+
+.menu li {
+  padding: 12px 10px;
+  border-bottom: 1px solid #cfd2cf;
+}
+
+.menu li:nth-child(1) {
+  border-top: 1px solid #cfd2cf;
+}
+
+select {
+  padding: 10px 20px;
+  width: 100%;
+  border: 2px solid #daeaf1;
+  border-radius: 20px;
+  margin-right: 24px;
+}
+
+

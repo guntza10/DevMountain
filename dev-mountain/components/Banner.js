@@ -5,7 +5,8 @@ function Banner({ img, title }) {
     <div className="bg-banner">
       <div className="banner">
         <img src={img} />
-        <div className="rotated-banner"></div>
+        <div className="rotated-banner">
+        </div>
         <p>{title}</p>
       </div>
     </div>
