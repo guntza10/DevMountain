@@ -1,5 +1,6 @@
 import MainLayout from "../components/layouts/MainLayout";
 import EventCard from "../components/EventCard";
+import Banner from "../components/Banner";
 
 const demoEventImg = "/images/demo-event-img.png";
 const demoEventBannerImg = "/images/demo-event-banner.png";
@@ -89,12 +90,13 @@ export default function Event({ events, allEvents }) {
   console.log("allEvents", allEvents);
   return (
     <MainLayout>
-      <div className="bg-event-banner mb-20">
+      {/* <div className="bg-event-banner mb-20">
         <div className="flex flex-col items-center justify-center">
           <div className="text-6xl font-bold">Event</div>
         </div>
-      </div>
+      </div> */}
 
+      <Banner img={demoEventBannerImg} title="Event" />
       <div className="container mx-auto px-28">
         <div className="flex items-center justify-between mb-4">
           <div className="text-4xl text-secondary font-bold ">Latest Event</div>
