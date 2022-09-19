@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "base_contents",
+  "info": {
+    "singularName": "base-content",
+    "pluralName": "base-contents",
+    "displayName": "BaseContent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Topic": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "StartDate": {
+      "type": "datetime"
+    },
+    "EndDate": {
+      "type": "datetime"
+    },
+    "Tags": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "ThumbnailUrl": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "CreatedBy": {
+      "type": "string",
+      "maxLength": 50
+    }
+  }
+}
