@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "personal_infos",
+  "info": {
+    "singularName": "personal-info",
+    "pluralName": "personal-infos",
+    "displayName": "PersonalInfo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FirstName": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "LastName": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "Gender": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "Birthday": {
+      "type": "date"
+    },
+    "Company": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "Position": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "PhotoUrl": {
+      "type": "string",
+      "maxLength": 100
+    }
+  }
+}

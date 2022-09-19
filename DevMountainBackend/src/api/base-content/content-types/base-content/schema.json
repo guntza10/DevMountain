@@ -4,7 +4,7 @@
   "info": {
     "singularName": "base-content",
     "pluralName": "base-contents",
-    "displayName": "BaseContent",
+    "displayName": "Contents",
     "description": ""
   },
   "options": {
@@ -34,13 +34,32 @@
       "type": "string",
       "maxLength": 50
     },
-    "content_type": {
+    "ContactType": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::content-type.content-type"
+      "target": "api::content-type.content-type",
+      "inversedBy": "Id"
     },
     "UpdatedBy": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 50
+    },
+    "CreatedAt": {
+      "type": "datetime"
+    },
+    "UpdatedAt": {
+      "type": "datetime"
+    },
+    "LastPublished": {
+      "type": "datetime"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "publish",
+        "draft",
+        "delete"
+      ]
     }
   }
 }
